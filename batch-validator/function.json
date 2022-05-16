@@ -1,0 +1,18 @@
+{
+  "bindings": [
+    {
+      "name": "paymentFile",
+      "type": "blobTrigger",
+      "direction": "in",
+      "path": "inbound",
+      "connection": "AzureWebJobsStorage"
+    },
+    {
+      "name": "processTopic",
+      "type": "serviceBus",
+      "topicName": "process",
+      "connection": "AZURE_SERVICE_BUS_CONNECTION_STRING",
+      "direction": "out"
+    }
+  ]
+}
